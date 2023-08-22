@@ -1,12 +1,16 @@
 extends pug/base
 
 prepend vars
-	- title = '<?= htmlspecialchars($title) ?>'
-	- description = '<?= htmlspecialchars($description) ?>'
-	- image = '<?= htmlspecialchars($image) ?>'
+	- title = 'Кодаков Вадим, Верстальщик/Frontend-разработчик'
+	- description = 'Мне нравится оживлять статические дизайны и превращать их в интерактивные приложения. Чем безумнее идея тем интереснее её реализация. Так-же я люблю заниматься разработкой и дизайном сложных проектов. Имею большой опыт дистанционной коммуникации. Очень мотивирован развиваться в направлении разработки Web-приложения. Почти всё свободное время уделяю обучению и практике.'
+	- image = './images/share.jpg'
+	//- - title = '<?= htmlspecialchars($title) ?>'
+	//- - description = '<?= htmlspecialchars($description) ?>'
+	//- - image = '<?= htmlspecialchars($image) ?>'
 
 append vars
-	//-
+	- link.icon16x16 = '/favicon_16x16.png'
+	- link.icon32x32 = '/favicon_32x32.png'
 
 block content
 	include pug/components/header/index

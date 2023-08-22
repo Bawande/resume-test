@@ -3,9 +3,11 @@
 	"version": "3.0.4",
 	"description": "Шаблон для разработки сайтов",
 	"repository": "ninelines-team/ninelines-template",
+	"homepage": "https://Bawande.github.io/resume-test",
 	"scripts": {
 		"prepare": "husky install",
-		"pre-commit": "lint-staged"
+		"pre-commit": "lint-staged",
+		"deploy": "gh-pages -d build"
 	},
 	"author": "Ninelines Agency <info@ninelines.agency>",
 	"license": "ISC",
@@ -70,6 +72,7 @@
 		"aos": "2.3.4",
 		"body-scroll-lock": "3.1.5",
 		"core-js": "3.15.2",
+		"gh-pages": "6.0.0",
 		"husky": "7.0.1",
 		"jquery": "3.6.0",
 		"locomotive-scroll": "4.1.4",
