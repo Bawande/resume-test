@@ -1,0 +1,55 @@
+.achievements-education {
+	&__title {
+		margin-bottom: 32px;
+		text-align: center;
+
+		@extend %title-h2;
+	}
+
+	&__card-list {}
+
+	&__card {
+		margin: 0 auto 28px;
+		padding: 0 20px;
+		width: 100%;
+		max-width: 190px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@include custom-bp(768) {
+	.achievements-education {
+		&__title {
+			text-align: start;
+		}
+
+		&__card-list {
+			display: flex;
+			flex-wrap: wrap;
+
+		}
+
+		&__card {
+			max-width: calc(33.333%);
+		}
+	}
+}
+
+@include custom-bp(540) {
+	.achievements-education {
+		&__title {
+			margin-bottom: 16px;
+		}
+
+		&__card-list {}
+
+		&__card {
+			margin: 0 auto 20px;
+			padding: 0 5px;
+			max-width: calc(50%);
+		}
+	}
+}

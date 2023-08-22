@@ -1,0 +1,37 @@
+@include custom-bp(540) {
+	.experience-card {
+
+		&__header {}
+
+		&__period {}
+
+		&__date {}
+
+		&__position-wrap {}
+
+		&__position-title {}
+
+		&__position-icons-wrap {}
+
+		&__position-icon {}
+
+		&__company-wrap {}
+
+		&__company-logo {}
+
+		&__company-name {
+			display: block;
+			margin-bottom: 2px;
+		}
+
+		&__company-info {}
+
+		&__location {}
+
+		&__description {}
+
+		&__works-list {}
+
+		&__work-link {}
+	}
+}

@@ -1,0 +1,100 @@
+.education-card {
+	text-align: center;
+
+	&__icons-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 7px;
+		height: 42px;
+	}
+
+	&__icon {
+		position: relative;
+		display: block;
+		border: 4px solid nth($icon-grey, 1);
+		border-radius: 8px;
+		width: 30px;
+		height: 30px;
+		background: linear-gradient(135deg, nth($icon-grey, 2) 50%, nth($icon-grey, 3) 50%);
+		transform: rotate(-45deg);
+
+		&._green {
+			$colors: $icon-green;
+
+			@include icon-education(nth($colors, 1), nth($colors, 2), nth($colors, 3));
+		}
+
+		&._blue {
+			$colors: $icon-blue;
+
+			@include icon-education(nth($colors, 1), nth($colors, 2), nth($colors, 3));
+		}
+
+		&._violet {
+			$colors: $icon-violet;
+
+			@include icon-education(nth($colors, 1), nth($colors, 2), nth($colors, 3));
+		}
+
+		&._yellow {
+			$colors: $icon-yellow;
+
+			@include icon-education(nth($colors, 1), nth($colors, 2), nth($colors, 3));
+		}
+
+		&._pink {
+			$colors: $icon-pink;
+
+			@include icon-education(nth($colors, 1), nth($colors, 2), nth($colors, 3));
+		}
+
+		&._orange {
+			$colors: $icon-orange;
+
+			@include icon-education(nth($colors, 1), nth($colors, 2), nth($colors, 3));
+		}
+	}
+
+	&__icon._primary {
+		z-index: 59;
+	}
+
+	&__icon._secondary {
+		z-index: 58;
+		border-width: 3px;
+		border-radius: 4px;
+		width: 15px;
+		height: 15px;
+	}
+
+	&__title {
+		margin: 0 auto 5px;
+		width: 100%;
+		max-width: 90%;
+
+		@extend %title-h3;
+	}
+
+	&__description {
+		@extend %description;
+		font-style: normal;
+	}
+}
+
+@include custom-bp(540) {
+	.education-card {
+
+		&__icons-wrap {}
+
+		&__icon {}
+
+		&__icon._primary {}
+
+		&__icon._secondary {}
+
+		&__title {}
+
+		&__description {}
+	}
+}

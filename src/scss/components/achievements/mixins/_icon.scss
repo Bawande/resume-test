@@ -1,0 +1,8 @@
+@mixin icon-experience($gradient-color-first: 50%, $gradient-color-second: 50%) {
+	background: linear-gradient(135deg, $gradient-color-first 50%, $gradient-color-second 50%);
+}
+
+@mixin icon-education($border-color, $gradient-color-first: 50%, $gradient-color-second: 50%) {
+	border-color: $border-color;
+	background: linear-gradient(135deg, $gradient-color-first 50%, $gradient-color-second 50%);
+}

@@ -1,0 +1,6 @@
+@mixin container($width: 1170px, $offset: 30px) {
+	padding-right: calc(#{$offset} / 2);
+	padding-left: calc(#{$offset} / 2);
+	max-width: calc(#{$width} + #{$offset});
+	box-sizing: border-box;
+}

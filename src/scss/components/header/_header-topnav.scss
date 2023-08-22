@@ -1,0 +1,60 @@
+.header-topnav {
+
+	&__list {
+		display: flex;
+	}
+
+	&__link {
+		position: relative;
+		margin-right: 32px;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: normal;
+		color: $color-primary;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link::after {
+		content: "";
+		position: absolute;
+		bottom: -12px;
+		display: block;
+		width: 0;
+		height: 2px;
+		background-color: $color-primary;
+		transition: width 0.15s ease;
+	}
+
+	&__link.is-active {
+		color: $color-link;
+
+		&::after {
+			background-color: $color-link;
+			width: 90%;
+		}
+	}
+
+	// for desktop and Internet Explorer 10+
+	@media (hover: hover) and (pointer: fine),
+	screen and (-ms-high-contrast: active),
+	(-ms-high-contrast: none) {
+		&__link:hover {
+			&::after {
+				width: 90%;
+			}
+		}
+	}
+}
+
+@include devices {
+	.header-topnav {
+		display: none;
+
+		&__list {}
+
+		&__link {}
+	}
+}

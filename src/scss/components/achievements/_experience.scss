@@ -1,0 +1,29 @@
+.achievements-experience {
+	&__title {
+		margin-bottom: 32px;
+
+		@extend %title-h2;
+	}
+
+	&__card-list {}
+
+	&__card {
+		margin-bottom: 62px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@include custom-bp(540) {
+	.achievements-experience {
+		&__title {
+			margin-bottom: 20px;
+		}
+
+		&__card-list {}
+
+		&__card {}
+	}
+}

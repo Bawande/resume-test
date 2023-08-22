@@ -1,0 +1,139 @@
+.header {
+	&__container {
+		position: relative;
+		z-index: 990;
+		padding-top: 100px;
+		padding-bottom: 40px;
+		width: 100%;
+	}
+
+	&__menu-wrap {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__face-logo {
+		margin-right: auto;
+		width: 150px;
+		height: 150px;
+
+		picture {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__topnav {
+		position: relative;
+		z-index: 991;
+	}
+
+	&__menu {
+		position: relative;
+		z-index: 992;
+	}
+
+	&__burger {
+		position: relative;
+		z-index: 993;
+		display: none;
+		margin-left: auto;
+		padding: 10px 0;
+	}
+
+	&__background-item {
+		position: absolute;
+		right: 180px;
+		top: 0;
+		z-index: 990;
+		width: 154px;
+		height: 154px;
+		background-image: url("../images/header-bg-item.svg");
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
+
+.header__menu-wrap.is-fixed {
+	position: fixed;
+	top: -1px;
+	z-index: 981;
+	padding: 15px 20px;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 0;
+		z-index: 980;
+		display: block;
+		width: 102vw;
+		height: 100%;
+		box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.05);
+		background: $color-primary;
+		transform: translate(-50%);
+	}
+
+	.header-topnav__link {
+		color: $color-white;
+	}
+
+	.header-topnav__link.is-active {
+		color: $color-link;
+	}
+
+	.header__face-logo {
+		position: absolute;
+		left: 20px;
+		top: 10px;
+		z-index: 983;
+		width: 60px;
+		height: 60px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: -1;
+			display: block;
+			border: 10px solid $color-primary;
+			border-radius: 50%;
+			width: 70px;
+			height: 70px;
+			background-color: $color-white;
+			transform: translate(-50%, -47%);
+		}
+	}
+
+	.header__topnav {
+		margin-left: auto;
+	}
+
+	.header__background-item {
+		background-image: none;
+	}
+
+	.hamburger__line {
+		background-color: $color-white;
+	}
+}
+
+.header__menu-wrap.is-fixed {
+	animation: animate-slide-in 0.7s cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes animate-slide-in {
+	from {
+		transform: translateY(-100%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}

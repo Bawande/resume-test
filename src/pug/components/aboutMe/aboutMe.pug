@@ -1,0 +1,29 @@
+-
+	const name = "Имя кандидата";
+	const position = "Желаемая позиция";
+	const text = "Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.";
+	const shareList = ['facebook', 'vk', 'telegram'];
+
+
+section.about-me#about-me
+	.about-me__container.container
+		.about-me__content.about-me-content
+			h1.about-me-content__title
+				span #{name},
+				span #{position}
+			p.about-me-content__text #{text}
+		.about-me__contacts.about-me-contacts
+			address.about-me-contacts__list
+				a(href="vadims@list.ru").about-me-contacts__link
+					| vadims@list.ru
+				a(href="tel:+79835311521").about-me-contacts__link
+					| +7(983) 531-15-21
+				a(href="https://yandex.ru/maps/-/CDQMnMkk" target="_blank").about-me-contacts__link
+					| г. Улан-Удэ
+			.about-me-contacts__share-list
+				each value in shareList
+					button(data-social=`${value}`).about-me-contacts__share-button.btn
+						+svg(`${value}`)
+		.about-me__background-item
+			+backgroundPattern
+

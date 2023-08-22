@@ -1,0 +1,25 @@
+// stylelint-disable at-rule-empty-line-before
+
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "sprites";
+@import "fonts";
+@import "vendor";
+@import "base";
+@import "helpers";
+
+@import "common";
+// @import "../../node_modules/aos/dist/aos.css";
+@import "../../node_modules/aos/src/sass/aos.scss";
+
+// @import "components/footer";
+@import "components/header/index";
+@import "components/about-me/index";
+@import "components/achievements/index";
+@import "components/skills/index";
+@import "components/footer/index";
+@import "components/preloader/index";
+@import "components/scroll-position/index";
+
+// @import "pages/home";

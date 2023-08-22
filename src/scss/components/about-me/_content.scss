@@ -1,0 +1,27 @@
+.about-me-content {
+	&__title {
+		@extend %title-h1;
+
+		margin-bottom: 30px;
+
+		&>span {
+			display: block;
+		}
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 140%;
+	}
+}
+
+@include mobile {
+	.about-me-content {
+		&__title {
+			margin: 0 0 20px;
+		}
+
+		&__text {}
+	}
+}

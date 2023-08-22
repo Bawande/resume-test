@@ -1,0 +1,45 @@
+%title {
+	margin: 0;
+	font-weight: 700;
+	font-style: normal;
+	line-height: normal;
+	color: $color-primary;
+}
+
+%title-h1 {
+	font-size: 36px;
+	line-height: 140%;
+
+	@extend %title;
+}
+
+%title-h2 {
+	font-size: 24px;
+
+	@extend %title;
+}
+
+%title-h3 {
+	font-size: 14px;
+	line-height: 140%;
+
+	@extend %title;
+}
+
+%description {
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 140%;
+	color: $color-primary;
+}
+
+@include custom-bp(540) {
+	%title-h1 {
+		font-size: 28px;
+	}
+
+	%title-h2 {
+		font-size: 20px;
+	}
+}

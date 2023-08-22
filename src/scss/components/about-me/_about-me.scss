@@ -1,0 +1,65 @@
+.about-me {
+	&__container {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 200px;
+	}
+
+	&__content {
+		z-index: 5;
+		margin-right: auto;
+		width: 100%;
+		max-width: 50%;
+	}
+
+	&__contacts {
+		width: 100%;
+		max-width: calc(25% - 16px);
+	}
+
+	&__background-item {
+		@extend %_background-pattern;
+		bottom: -65px;
+	}
+}
+
+@include tablet {
+	.about-me {
+		&__container {
+			padding-bottom: 100px;
+		}
+
+		&__content {
+			max-width: calc(60% - 20px);
+		}
+
+		&__contacts {}
+
+		&__background-item {}
+	}
+}
+
+@include mobile {
+	.about-me {
+		&__container {
+			display: block;
+			justify-content: flex-start;
+			margin-right: 0;
+			padding-bottom: 40px;
+		}
+
+		&__content {
+			margin-bottom: 24px;
+			max-width: none;
+		}
+
+		&__contacts {
+			max-width: none;
+		}
+
+		&__background-item {
+			bottom: -45px;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+mixin educationCard(cardData = {})
+	- const {icons, title, description} = cardData;
+	article.education-card(
+		data-aos="fade-up"
+		data-aos-duration="1000"
+	)
+		.education-card__icons-wrap
+			each icon in icons
+				- const {primary, color} = icon;
+				- const iconClass = primary ? `_primary _${color}` : `_secondary _${color}`;
+				span.education-card__icon(class=`${iconClass}`)
+		h3.education-card__title= title
+		p.education-card__description!= description
+
+

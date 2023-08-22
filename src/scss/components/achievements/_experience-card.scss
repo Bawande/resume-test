@@ -1,0 +1,137 @@
+.experience-card {
+
+	&__header {}
+
+	&__period {
+		margin-bottom: 7px;
+	}
+
+	&__date {
+		color: $color-gray;
+	}
+
+	&__date._end::before {
+		content: "\00a0-\00a0";
+		display: inline-block;
+	}
+
+	&__position-wrap {
+		display: flex;
+		align-items: center;
+		margin-bottom: 8px;
+	}
+
+	&__position-title {
+		margin-right: 10px;
+
+		@extend %title-h3;
+	}
+
+	&__position-icons-wrap {
+		display: flex;
+	}
+
+	&__position-icon {
+		position: relative;
+		display: block;
+		flex-shrink: 0;
+		border-radius: 2px;
+		width: 12px;
+		height: 12px;
+		background: linear-gradient(135deg, nth($icon-grey, 2) 50%, nth($icon-grey, 3) 50%);
+		transform: rotate(-45deg);
+
+		&._green {
+			$colors: $icon-green;
+
+			@include icon-experience(nth($colors, 2), nth($colors, 3));
+		}
+
+		&._blue {
+			$colors: $icon-blue;
+
+			@include icon-experience(nth($colors, 2), nth($colors, 3));
+		}
+
+		&._violet {
+			$colors: $icon-violet;
+
+			@include icon-experience(nth($colors, 2), nth($colors, 3));
+		}
+
+		&._yellow {
+			$colors: $icon-yellow;
+
+			@include icon-experience(nth($colors, 2), nth($colors, 3));
+		}
+
+		&._pink {
+			$colors: $icon-pink;
+
+			@include icon-experience(nth($colors, 2), nth($colors, 3));
+		}
+
+		&._orange {
+			$colors: $icon-orange;
+
+			@include icon-experience(nth($colors, 2), nth($colors, 3));
+		}
+	}
+
+	&__company-wrap {
+		display: flex;
+		align-items: center;
+		margin-bottom: 8px;
+	}
+
+	&__company-logo {
+		display: block;
+		flex-shrink: 0;
+		margin-right: 8px;
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+
+		picture {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__company-name {
+		margin-right: 8px;
+		font-weight: 700;
+	}
+
+	&__company-info {}
+
+	&__location {
+		margin-bottom: 8px;
+	}
+
+	&__description {
+		margin-bottom: 2px;
+
+		@extend %description;
+	}
+
+	&__works-list {
+		display: inline-flex;
+		flex-direction: column;
+	}
+
+	&__work-link {
+		margin-bottom: 3px;
+		font-style: normal;
+		font-size: 14px;
+		line-height: normal;
+		text-decoration-line: underline;
+		color: $color-link;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+include data/skillsData
+
+include mixins/skillsCard
+
+section.skills#skills
+	.skills__container.container
+		.skills__title
+			| Навыки
+		.skills__card-list
+			each skillsCard in skillsData
+				.skills__card
+					+skillsCard(skillsCard)

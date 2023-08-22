@@ -1,0 +1,40 @@
+mixin experienceCard(cardData = {})
+	- const { period, position, company, location, description, worksLinks } = cardData;
+
+	article.experience-card(
+		data-aos="fade-up"
+		data-aos-duration="1000"
+	)
+		header.experience-card__header
+			.experience-card__period
+				- if (period.startDate)
+					span.experience-card__date= period.startDate
+				- if (period.endDate)
+					span.experience-card__date._end= period.endDate
+			.experience-card__position-wrap
+				h3.experience-card__position-title= position.title
+				.experience-card__position-icons-wrap
+					each icon, index in position.icons
+						span(class= `experience-card__position-icon _${icon}` style = `z-index: ${100 - index}`)
+			- if (company.isVisible)
+				- const { image, name, info } = company;
+				.experience-card__company-wrap
+					- if (image)
+						.experience-card__company-logo
+							+lazyPicture({
+								src: `${baseDir}images/${image}`,
+								alt: `${name}`,
+							})
+					.experience-card__company-description
+						- if (name)
+							span.experience-card__company-name= name
+						- if (info)
+							span.experience-card__company-info= info
+			- if (location)
+				.experience-card__location= location
+		- if (description)
+			p.experience-card__description!= description
+		- if (worksLinks.length)
+			.experience-card__works-list
+					each work in worksLinks
+						a.experience-card__work-link(href=`${work.url ? work.url : '#'}`)= work.label

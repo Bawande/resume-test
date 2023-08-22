@@ -1,0 +1,9 @@
+mixin skillsCard(cardData = {})
+	- const {title, skills} = cardData;
+	article.skills-card(
+		data-aos="fade-up"
+		data-aos-anchor-placement="top-bottom"
+		data-aos-duration="1000"
+	)
+		h3.skills-card__group-title= title
+		p.skills-card__skills-list!= skills

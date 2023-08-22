@@ -1,0 +1,49 @@
+-
+	const	menuValue = [
+		{name: 'Резюме', url: '#achievements', state: ''},
+		{name: 'О себе', url: '#about-me', state: ''},
+		{name: 'Навыки', url: '#skills', state: ''}
+		];
+
+header.header
+	.header__container.container
+		.header__menu-wrap
+			.header__face-logo
+				+lazyPicture({
+				src: `${baseDir}images/header-logo-desktop.png`,
+				alt: 'logo',
+				}, [
+					{
+						srcset: `${baseDir}images/header-logo-mobile.png`,
+						media: '(max-width: 1024px)'
+					}
+				])
+			nav.header__topnav.header-topnav
+				.header-topnav__list
+					each value, index in menuValue
+						- const calss  = value.state ? 'header-topnav__link '+value.state : 'header-topnav__link';
+						a(
+							class=`${calss} js-to-anchor`
+							href=value.url
+							data-link=index
+						)
+							!= value.name
+			nav.header__menu.header-menu.is-hidden
+				.header-menu__overlay
+				.header-menu__list
+					each value, index in menuValue
+						a.header-menu__link.js-to-anchor(
+							href=value.url
+							data-link=index
+						)= value.name
+				.header-menu__image
+					+lazyPicture({
+						src: `${baseDir}images/header-menu_watch.png`,
+						alt: 'watch-image',
+					})
+			.header__burger
+				button.hamburger.btn.js-burger
+					span.hamburger__line._top
+					span.hamburger__line._middle
+					span.hamburger__line._bottom
+			.header__background-item

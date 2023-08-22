@@ -1,0 +1,95 @@
+.about-me-contacts {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 15px;
+	}
+
+	&__link {
+		position: relative;
+		margin-bottom: 10px;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 14px;
+		line-height: 140%;
+		color: $color-primary;
+		transition: color 0.2s ease;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__link::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		display: block;
+		width: 100%;
+		height: 1px;
+		background-color: $color-link;
+		opacity: 0;
+		transition: opacity 0.15s ease;
+	}
+
+	&__share-list {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 115px;
+	}
+
+	&__share-button {
+		position: relative;
+		display: block;
+		width: 25px;
+		height: 25px;
+
+		&>svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+			fill: $color-primary;
+			object-fit: cover;
+			transition: fill 0.2s ease, transform 0.15s ease;
+		}
+	}
+
+	// for desktop and Internet Explorer 10+
+	@media (hover: hover) and (pointer: fine),
+	screen and (-ms-high-contrast: active),
+	(-ms-high-contrast: none) {
+		&__link:hover {
+			color: $color-link;
+
+			&::after {
+				opacity: 1;
+			}
+		}
+
+		&__share-button:hover {
+			&>svg {
+				transform: translateY(-1px);
+			}
+
+			&[data-social="facebook"] {
+				&>svg {
+					fill: #4763a0;
+				}
+			}
+
+			&[data-social="vk"] {
+				&>svg {
+					fill: #0177ff;
+				}
+			}
+
+			&[data-social="telegram"] {
+				&>svg {
+					fill: #32a8e3;
+				}
+			}
+		}
+	}
+}

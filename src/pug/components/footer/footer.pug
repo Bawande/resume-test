@@ -1,0 +1,14 @@
+footer.footer
+	.footer__background-item(
+		data-aos="zoom-in"
+		data-aos-offset="100"
+	)
+		+lazyPicture({
+			src: `${baseDir}images/footer_hands-desktop.png`,
+			alt: 'hands',
+		}, [
+			{
+				srcset: `${baseDir}images/footer_hands-mobile.png`,
+				media: '(max-width: 540px)'
+			}
+		])

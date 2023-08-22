@@ -1,0 +1,37 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// COLORS
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #828282;
+
+$color-primary: #282A33;
+$color-link: #2F80ED;
+
+$icon-grey: hsl(0, 0, 75%), hsl(0, 0%, 65%), hsl(0, 0%, 50%);
+$icon-green: #7cf5d2, #66dfbc, #3dc39b;
+$icon-blue: #c0f0ff, #79cafb, #4bbef2;
+$icon-violet: #ccc9fd, #afaafe, #928cf8;
+$icon-yellow: #fff3b5, #ffe975, #ffcd3d;
+$icon-pink: #ff99be, #fe74a6, #ee5087;
+$icon-orange: #ffd5b4, #ffbc89, #ffa25a;
+
+// FONTS
+// stylelint-disable-next-line
+$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$font-family-sf-pro-display: "SF Pro Display", sans-serif;
+
+// EASING TRANSITIONS
+$duration-normal: 0.4s;
+$easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
+$easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
+$easing-out: ease-out;
+$easing-in: ease-in;
+
+// Settings
+$desktop: 1025;
+$desktop-xl: 1800;
+$laptop: 1440;
+$tablet: 768;
+$mobile: 320;
+$desktop-vh: 750;

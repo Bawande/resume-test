@@ -1,0 +1,34 @@
+include data/educationData
+include data/experienceData
+
+include mixins/educationCard
+include mixins/experienceCard
+
+section.achievements#achievements
+	.achievements__container.container
+		.achievements__experience.achievements-experience
+			h2.achievements-experience__title
+				| Опыт работы
+			.achievements-experience__card-list
+				each experienceCard in experienceData
+					.achievements-experience__card
+						+experienceCard(experienceCard)
+		.achievements__scene
+			+lazyPicture({
+				src: `${baseDir}images/achievements-boy-desktop.png`,
+				alt: 'logo',
+			}, [
+				{
+					srcset: `${baseDir}images/achievements-boy-mobile.png`,
+					media: '(max-width: 620px)'
+				}
+			])
+		.achievements__education.achievements-education
+			h2.achievements-education__title
+				| Образование
+			.achievements-education__card-list
+				each educationCard in educationData
+					.achievements-education__card
+						+educationCard(educationCard)
+		.achievements__background-item
+			+backgroundPattern
