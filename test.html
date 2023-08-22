@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="<?= htmlspecialchars($description) ?>">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:title" content="<?= htmlspecialchars($title) ?>">
+		<meta property="og:description" content="<?= htmlspecialchars($description) ?>">
+		<meta property="og:image" content="<?= htmlspecialchars($image) ?>">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="<?= htmlspecialchars($title) ?>">
+		<meta name="twitter:description" content="<?= htmlspecialchars($description) ?>">
+		<meta name="twitter:image" content="<?= htmlspecialchars($image) ?>">
+		<title><?= htmlspecialchars($title) ?></title>
+		<link rel="stylesheet" href="./css/main.css?v=1692686814957">
+	</head>
+	<body data-scroll-container>
+		<header class="header">
+			<div class="header__container container">
+				<div class="header__menu-wrap">
+					<div class="header__face-logo">
+						<picture class="lozad js-lazy" data-iesrc="./images/header-logo-desktop.png" data-alt="logo">
+							<source srcset="./images/header-logo-mobile.png" media="(max-width: 1024px)"/>
+							<source srcset="./images/header-logo-desktop.png"/>
+						</picture>
+					</div>
+					<nav class="header__topnav header-topnav">
+						<div class="header-topnav__list"><a class="header-topnav__link js-to-anchor" href="#achievements" data-link="0">Резюме</a><a class="header-topnav__link js-to-anchor" href="#about-me" data-link="1">О себе</a><a class="header-topnav__link js-to-anchor" href="#skills" data-link="2">Навыки</a>
+						</div>
+					</nav>
+					<nav class="header__menu header-menu is-hidden">
+						<div class="header-menu__overlay"></div>
+						<div class="header-menu__list"><a class="header-menu__link js-to-anchor" href="#achievements" data-link="0">Резюме</a><a class="header-menu__link js-to-anchor" href="#about-me" data-link="1">О себе</a><a class="header-menu__link js-to-anchor" href="#skills" data-link="2">Навыки</a>
+						</div>
+						<div class="header-menu__image">
+							<picture class="lozad js-lazy" data-iesrc="./images/header-menu_watch.png" data-alt="watch-image">
+								<source srcset="./images/header-menu_watch.png"/>
+							</picture>
+						</div>
+					</nav>
+					<div class="header__burger">
+						<button class="hamburger btn js-burger"><span class="hamburger__line _top"></span><span class="hamburger__line _middle"></span><span class="hamburger__line _bottom"></span></button>
+					</div>
+					<div class="header__background-item"></div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="about-me" id="about-me">
+				<div class="about-me__container container">
+					<div class="about-me__content about-me-content">
+						<h1 class="about-me-content__title"><span>Кодаков Вадим,</span><span>Верстальщик/Frontend-разработчик</span></h1>
+						<p class="about-me-content__text">Мне нравится оживлять статические дизайны и превращать их в интерактивные приложения. Чем безумнее идея тем интереснее её реализация. Так-же я люблю заниматься разработкой и дизайном сложных проектов. Имею большой опыт дистанционной коммуникации. Очень мотивирован развиваться в направлении разработки Web-приложения. Почти всё свободное время уделяю обучению и практике</p>
+					</div>
+					<div class="about-me__contacts about-me-contacts">
+						<address class="about-me-contacts__list"><a class="about-me-contacts__link" href="vadims@list.ru">vadims@list.ru</a><a class="about-me-contacts__link" href="tel:+79835311521">+7(983) 531-15-21</a><a class="about-me-contacts__link" href="https://yandex.ru/maps/-/CDQMnMkk" target="_blank">г. Улан-Удэ</a></address>
+						<div class="about-me-contacts__share-list">
+							<button class="about-me-contacts__share-button btn" data-social="facebook">
+								<svg>
+									<use xlink:href="./images/sprites.svg#facebook"></use>
+								</svg>
+							</button>
+							<button class="about-me-contacts__share-button btn" data-social="vk">
+								<svg>
+									<use xlink:href="./images/sprites.svg#vk"></use>
+								</svg>
+							</button>
+							<button class="about-me-contacts__share-button btn" data-social="telegram">
+								<svg>
+									<use xlink:href="./images/sprites.svg#telegram"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="about-me__background-item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="1262" height="396" viewbox="0 0 1262 396" fill="none">
+							<path d="M4.99996 258.098C87.1769 211.847 412.63 308.897 521.657 337.709C630.684 366.521 886.164 430.21 1032.62 337.709C1179.07 245.208 1252 2.99987 1252 2.99987" stroke="url(#paint0_linear_12766_175)"></path>
+							<defs>
+								<lineargradient id="paint0_linear_12766_175" x1="1274.27" y1="173.937" x2="4.18663" y2="174.81" gradientunits="userSpaceOnUse">
+									<stop offset="0.0833333" stop-color="#FCDED1" stop-opacity="0"></stop>
+									<stop offset="0.322917" stop-color="#FCDED1" stop-opacity="0.6"></stop>
+									<stop offset="0.713542" stop-color="#FCDED1" stop-opacity="0"></stop>
+									<stop offset="0.911458" stop-color="#FCDED1" stop-opacity="0.2"></stop>
+								</lineargradient>
+							</defs>
+						</svg>
+					</div>
+				</div>
+			</section>
+			<section class="achievements" id="achievements">
+				<div class="achievements__container container">
+					<div class="achievements__experience achievements-experience">
+						<h2 class="achievements-experience__title">Опыт работы</h2>
+						<div class="achievements-experience__card-list">
+							<div class="achievements-experience__card">
+											<article class="experience-card" data-aos="fade-up" data-aos-duration="1000">
+												<header class="experience-card__header">
+													<div class="experience-card__period"><span class="experience-card__date">Июль 2019</span>
+													</div>
+													<div class="experience-card__position-wrap">
+														<h3 class="experience-card__position-title">Freelance Designer</h3>
+														<div class="experience-card__position-icons-wrap"><span class="experience-card__position-icon _violet" style="z-index: 100"></span><span class="experience-card__position-icon _yellow" style="z-index: 99"></span><span class="experience-card__position-icon _blue" style="z-index: 98"></span>
+														</div>
+													</div>
+													<div class="experience-card__location">Netherlands, Worldwide</div>
+												</header>
+												<p class="experience-card__description">Available for a project or job in UX/UI, Visual and Product design.</p>
+												<div class="experience-card__works-list"><a class="experience-card__work-link" href="#">Commercial tryouts</a><a class="experience-card__work-link" href="#">Personal projects</a>
+												</div>
+											</article>
+							</div>
+							<div class="achievements-experience__card">
+											<article class="experience-card" data-aos="fade-up" data-aos-duration="1000">
+												<header class="experience-card__header">
+													<div class="experience-card__period"><span class="experience-card__date">Январь 2017</span><span class="experience-card__date _end">Сентябрь 2018</span>
+													</div>
+													<div class="experience-card__position-wrap">
+														<h3 class="experience-card__position-title">Digital Designer</h3>
+														<div class="experience-card__position-icons-wrap"><span class="experience-card__position-icon _blue" style="z-index: 100"></span><span class="experience-card__position-icon _pink" style="z-index: 99"></span>
+														</div>
+													</div>
+													<div class="experience-card__company-wrap">
+														<div class="experience-card__company-logo">
+															<picture class="lozad js-lazy" data-iesrc="./images/icon-company_j-creative-solutions.jpg" data-alt="J Creative Solutions">
+																<source srcset="./images/icon-company_j-creative-solutions.jpg"/>
+															</picture>
+														</div>
+														<div class="experience-card__company-description"><span class="experience-card__company-name">J Creative Solutions</span><span class="experience-card__company-info">Digital agency in Minsk, Belarus</span>
+														</div>
+													</div>
+												</header>
+												<p class="experience-card__description">Created visuals for digital marketing channels such as social media, promo web and online ads. Developed visual language from scratch or following the branding guidelines. Designed presentations <br> for clients and indoor purposes.</p>
+												<div class="experience-card__works-list"><a class="experience-card__work-link" href="#">Agency projects</a>
+												</div>
+											</article>
+							</div>
+							<div class="achievements-experience__card">
+											<article class="experience-card" data-aos="fade-up" data-aos-duration="1000">
+												<header class="experience-card__header">
+													<div class="experience-card__period"><span class="experience-card__date">Март 2014</span><span class="experience-card__date _end">Февраль 2017</span>
+													</div>
+													<div class="experience-card__position-wrap">
+														<h3 class="experience-card__position-title">SEO Specialist → Lead SEO Specialist</h3>
+														<div class="experience-card__position-icons-wrap"><span class="experience-card__position-icon _orange" style="z-index: 100"></span><span class="experience-card__position-icon _blue" style="z-index: 99"></span>
+														</div>
+													</div>
+													<div class="experience-card__company-wrap">
+														<div class="experience-card__company-logo">
+															<picture class="lozad js-lazy" data-iesrc="./images/icon-company_oz-by.jpg" data-alt="OZ.by">
+																<source srcset="./images/icon-company_oz-by.jpg"/>
+															</picture>
+														</div>
+														<div class="experience-card__company-description"><span class="experience-card__company-name">OZ.by</span><span class="experience-card__company-info">Online bookstore in Minsk, Belarus</span>
+														</div>
+													</div>
+												</header>
+												<p class="experience-card__description">Improved website performance and user experience of the biggest online bookstore OZ in Belarus, being a part of the marketing team, <br> I interpreted Google Analytics data to IT, content and marketing colleagues. Advised on tech and content optimization strategy, automated processes, provided reports, increased organic traffic up to 150%.</p>
+												<div class="experience-card__works-list"><a class="experience-card__work-link" href="#">Annual company report 2016</a>
+												</div>
+											</article>
+							</div>
+							<div class="achievements-experience__card">
+											<article class="experience-card" data-aos="fade-up" data-aos-duration="1000">
+												<header class="experience-card__header">
+													<div class="experience-card__period"><span class="experience-card__date">Август 2012</span><span class="experience-card__date _end">Ноябрь 2013</span>
+													</div>
+													<div class="experience-card__position-wrap">
+														<h3 class="experience-card__position-title">Content Specialist</h3>
+														<div class="experience-card__position-icons-wrap"><span class="experience-card__position-icon _orange" style="z-index: 100"></span>
+														</div>
+													</div>
+													<div class="experience-card__company-wrap">
+														<div class="experience-card__company-logo">
+															<picture class="lozad js-lazy" data-iesrc="./images/icon-company_21vek-by.jpg" data-alt="21vek.by">
+																<source srcset="./images/icon-company_21vek-by.jpg"/>
+															</picture>
+														</div>
+														<div class="experience-card__company-description"><span class="experience-card__company-name">21vek.by</span><span class="experience-card__company-info">E-commerce store in Minsk, Belarus</span>
+														</div>
+													</div>
+												</header>
+												<p class="experience-card__description">Added and modified the product information, prepared images and text for the website, developed categories filters, ensure all info is correct in the catalogue with the goal of improving online shopper experience.</p>
+											</article>
+							</div>
+							<div class="achievements-experience__card">
+											<article class="experience-card" data-aos="fade-up" data-aos-duration="1000">
+												<header class="experience-card__header">
+													<div class="experience-card__period"><span class="experience-card__date">Август 2011</span><span class="experience-card__date _end">Ноябрь 2014</span>
+													</div>
+													<div class="experience-card__position-wrap">
+														<h3 class="experience-card__position-title">Software Support Engineer</h3>
+														<div class="experience-card__position-icons-wrap"><span class="experience-card__position-icon _green" style="z-index: 100"></span>
+														</div>
+													</div>
+													<div class="experience-card__company-wrap">
+														<div class="experience-card__company-logo">
+															<picture class="lozad js-lazy" data-iesrc="./images/icon-company_Integral.jpg" data-alt="Integral">
+																<source srcset="./images/icon-company_Integral.jpg"/>
+															</picture>
+														</div>
+														<div class="experience-card__company-description"><span class="experience-card__company-name">Integral</span><span class="experience-card__company-info">Microelectronics factory in Minsk, Belarus</span>
+														</div>
+													</div>
+												</header>
+												<p class="experience-card__description">Supported retail accounting system LS Trade, troubleshoot technical problems.</p>
+											</article>
+							</div>
+						</div>
+					</div>
+					<div class="achievements__scene">
+						<picture class="lozad js-lazy" data-iesrc="./images/achievements-boy-desktop.png" data-alt="logo">
+							<source srcset="./images/achievements-boy-mobile.png" media="(max-width: 620px)"/>
+							<source srcset="./images/achievements-boy-desktop.png"/>
+						</picture>
+					</div>
+					<div class="achievements__education achievements-education">
+						<h2 class="achievements-education__title">Образование</h2>
+						<div class="achievements-education__card-list">
+							<div class="achievements-education__card">
+											<article class="education-card" data-aos="fade-up" data-aos-duration="1000">
+												<div class="education-card__icons-wrap"><span class="education-card__icon _secondary _blue"></span><span class="education-card__icon _primary _violet"></span><span class="education-card__icon _secondary _yellow"></span>
+												</div>
+												<h3 class="education-card__title">Interface Design: Web &amp; Mobile</h3>
+												<p class="education-card__description">IT-Academy, 2020</p>
+											</article>
+							</div>
+							<div class="achievements-education__card">
+											<article class="education-card" data-aos="fade-up" data-aos-duration="1000">
+												<div class="education-card__icons-wrap"><span class="education-card__icon _primary _yellow"></span>
+												</div>
+												<h3 class="education-card__title">Fundamentals of Usability</h3>
+												<p class="education-card__description">Skillshare, Oct 2018</p>
+											</article>
+							</div>
+							<div class="achievements-education__card">
+											<article class="education-card" data-aos="fade-up" data-aos-duration="1000">
+												<div class="education-card__icons-wrap"><span class="education-card__icon _primary _pink"></span>
+												</div>
+												<h3 class="education-card__title">CG Artist</h3>
+												<p class="education-card__description">Polygon CG School, <br> May-Sep 2017</p>
+											</article>
+							</div>
+							<div class="achievements-education__card">
+											<article class="education-card" data-aos="fade-up" data-aos-duration="1000">
+												<div class="education-card__icons-wrap"><span class="education-card__icon _primary _blue"></span>
+												</div>
+												<h3 class="education-card__title">Graphic Design</h3>
+												<p class="education-card__description">Belarusian State Academy of&nbsp;Arts, 2015&nbsp;&mdash; 2017 Postgraduate Diploma</p>
+											</article>
+							</div>
+							<div class="achievements-education__card">
+											<article class="education-card" data-aos="fade-up" data-aos-duration="1000">
+												<div class="education-card__icons-wrap"><span class="education-card__icon _primary _orange"></span>
+												</div>
+												<h3 class="education-card__title">SEO Specialist</h3>
+												<p class="education-card__description">ARTOX Media, Jun-Aug 2012</p>
+											</article>
+							</div>
+							<div class="achievements-education__card">
+											<article class="education-card" data-aos="fade-up" data-aos-duration="1000">
+												<div class="education-card__icons-wrap"><span class="education-card__icon _primary _green"></span>
+												</div>
+												<h3 class="education-card__title">Information Technology Software</h3>
+												<p class="education-card__description">Belarusian State University of&nbsp;Informatics and Radioelectronics, 2011&nbsp;&mdash; 2015 <br> Bachelor&rsquo;s degree Polotsk State Economic College, 2007&nbsp;&mdash; 2011 Associate&rsquo;s degree</p>
+											</article>
+							</div>
+						</div>
+					</div>
+					<div class="achievements__background-item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="1262" height="396" viewbox="0 0 1262 396" fill="none">
+							<path d="M4.99996 258.098C87.1769 211.847 412.63 308.897 521.657 337.709C630.684 366.521 886.164 430.21 1032.62 337.709C1179.07 245.208 1252 2.99987 1252 2.99987" stroke="url(#paint0_linear_12766_175)"></path>
+							<defs>
+								<lineargradient id="paint0_linear_12766_175" x1="1274.27" y1="173.937" x2="4.18663" y2="174.81" gradientunits="userSpaceOnUse">
+									<stop offset="0.0833333" stop-color="#FCDED1" stop-opacity="0"></stop>
+									<stop offset="0.322917" stop-color="#FCDED1" stop-opacity="0.6"></stop>
+									<stop offset="0.713542" stop-color="#FCDED1" stop-opacity="0"></stop>
+									<stop offset="0.911458" stop-color="#FCDED1" stop-opacity="0.2"></stop>
+								</lineargradient>
+							</defs>
+						</svg>
+					</div>
+				</div>
+			</section>
+			<section class="skills" id="skills">
+				<div class="skills__container container">
+					<div class="skills__title">Навыки</div>
+					<div class="skills__card-list">
+						<div class="skills__card">
+										<article class="skills-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+											<h3 class="skills-card__group-title">Adobe Creative Suite</h3>
+											<p class="skills-card__skills-list">Photoshop, Illustrator, InDesign, XD, After Effects</p>
+										</article>
+						</div>
+						<div class="skills__card">
+										<article class="skills-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+											<h3 class="skills-card__group-title">Prototyping</h3>
+											<p class="skills-card__skills-list">Sketch, Figma, InVision, Marvel, Principle, Balsamiq</p>
+										</article>
+						</div>
+						<div class="skills__card">
+										<article class="skills-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+											<h3 class="skills-card__group-title">Additional</h3>
+											<p class="skills-card__skills-list">HTML, CSS, Google Analytics, Keynote, Miro</p>
+										</article>
+						</div>
+						<div class="skills__card">
+										<article class="skills-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+											<h3 class="skills-card__group-title">Languages</h3>
+											<p class="skills-card__skills-list">Conversational English and Native Russian</p>
+										</article>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__background-item" data-aos="zoom-in" data-aos-offset="100">
+				<picture class="lozad js-lazy" data-iesrc="./images/footer_hands-desktop.png" data-alt="hands">
+					<source srcset="./images/footer_hands-mobile.png" media="(max-width: 540px)"/>
+					<source srcset="./images/footer_hands-desktop.png"/>
+				</picture>
+			</div>
+		</footer>
+		<div class="preloader is-visible" id="preloader">
+			<div class="preloader__scene">
+				<picture class="lozad js-lazy preloader__image" data-iesrc="./images/preloader-rocket-man.jpg" data-alt="rocket-man">
+					<source srcset="./images/preloader-rocket-man.jpg"/>
+				</picture>
+			</div>
+		</div>
+		<div class="scroll-position">
+			<div class="scroll-position__wrap js-back-to-top">
+				<div class="scroll-position__progress-bar"><span class="scroll-position__counter">0</span><span class="scroll-position__unit">%</span></div>
+				<div class="scroll-position__to-up"><span class="scroll-position__to-up-icon"></span></div>
+			</div>
+		</div>
+		<script>
+			if (!('IntersectionObserver' in window)) {
+				var script = document.createElement("script");
+				script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+				document.getElementsByTagName('head')[0].appendChild(script);
+			}
+		</script>
+		<script src="./js/vendor.js?v=1692686814959"></script>
+		<script src="./js/main.js?v=1692686814959"></script>
+	</body>
+</html>
