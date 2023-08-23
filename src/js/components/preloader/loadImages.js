@@ -40,7 +40,6 @@ function readyImges(callbackprogress, callbackReady) {
 	});
 
 	const totalImages = loader.getTotalItems();
-	console.log("readyImges >>>>", totalImages);
 
 	let count = 0;
 	let progress = 0;

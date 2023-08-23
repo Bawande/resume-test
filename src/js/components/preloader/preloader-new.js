@@ -2,8 +2,6 @@ import helpers from "../../helpers";
 
 import { readyImges } from "./loadImages";
 
-console.log("preloader");
-
 const $parentPreloader = document.querySelector("#preloader");
 const $preloaderScene = document.querySelector(".preloader__scene");
 
@@ -28,29 +26,20 @@ function preloaderImageLoad() {
 }
 
 const onLoadWindow = () => {
-	console.log("on load Window");
-
 	setTimeout(() => {
 		removePreloader();
 	}, 3000);
 };
 
 const contentLoaded = () => {
-	console.log("content Loaded");
-
 	const $mediaFiles = document.querySelectorAll("img, video");
 
 	preloaderImageLoad().then(() => {
-		console.log("preloader image Loaded");
-
 		const windowHeight = window.screen.height;
 		const windowWidth = window.screen.width;
 
 		const $image = document.querySelector(".preloader__image");
 		const imageRect = $image.getBoundingClientRect();
-
-		console.log(imageRect);
-		console.log($image.scrollHeight);
 
 		const startImagePositionX = imageRect.x;
 		const endImagePositionX = windowWidth - imageRect.width;
@@ -67,8 +56,6 @@ const contentLoaded = () => {
 
 		readyImges(
 			(progress) => {
-				console.log(startImagePositionY + (distanceY * progress) / 100);
-
 				positionImageX =
 					startImagePositionX + (distanceX * progress) / 100;
 				positionImageY =
@@ -78,13 +65,10 @@ const contentLoaded = () => {
 				$preloaderScene.style.top = positionImageY + "px";
 			},
 			() => {
-				console.log("++++ readyImges ++++");
 				removePreloader();
 			}
 		);
 	});
-
-	console.log($mediaFiles.length);
 };
 
 window.addEventListener("load", onLoadWindow);
