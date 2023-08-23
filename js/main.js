@@ -329,7 +329,6 @@ function readyImges(callbackprogress, callbackReady) {
     loader.addItem(url);
   });
   var totalImages = loader.getTotalItems();
-  console.log("readyImges >>>>", totalImages);
   var count = 0;
   var progress = 0;
   loader.load(function () {
@@ -358,7 +357,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _loadImages__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loadImages */ "./src/js/components/preloader/loadImages.js");
 
 
-console.log("preloader");
 var $parentPreloader = document.querySelector("#preloader");
 var $preloaderScene = document.querySelector(".preloader__scene");
 _helpers__WEBPACK_IMPORTED_MODULE_0__["default"].lockScroll(true, $("#preloader"), "preloader");
@@ -377,22 +375,17 @@ function preloaderImageLoad() {
   });
 }
 var onLoadWindow = function onLoadWindow() {
-  console.log("on load Window");
   setTimeout(function () {
     removePreloader();
   }, 3000);
 };
 var contentLoaded = function contentLoaded() {
-  console.log("content Loaded");
   var $mediaFiles = document.querySelectorAll("img, video");
   preloaderImageLoad().then(function () {
-    console.log("preloader image Loaded");
     var windowHeight = window.screen.height;
     var windowWidth = window.screen.width;
     var $image = document.querySelector(".preloader__image");
     var imageRect = $image.getBoundingClientRect();
-    console.log(imageRect);
-    console.log($image.scrollHeight);
     var startImagePositionX = imageRect.x;
     var endImagePositionX = windowWidth - imageRect.width;
     var distanceX = Math.abs(startImagePositionX) + Math.abs(endImagePositionX);
@@ -402,17 +395,14 @@ var contentLoaded = function contentLoaded() {
     var positionImageX = startImagePositionX;
     var positionImageY = startImagePositionY;
     (0,_loadImages__WEBPACK_IMPORTED_MODULE_1__.readyImges)(function (progress) {
-      console.log(startImagePositionY + distanceY * progress / 100);
       positionImageX = startImagePositionX + distanceX * progress / 100;
       positionImageY = startImagePositionY - distanceY * progress / 100;
       $preloaderScene.style.left = positionImageX + "px";
       $preloaderScene.style.top = positionImageY + "px";
     }, function () {
-      console.log("++++ readyImges ++++");
       removePreloader();
     });
   });
-  console.log($mediaFiles.length);
 };
 window.addEventListener("load", onLoadWindow);
 document.addEventListener("DOMContentLoaded", contentLoaded);
