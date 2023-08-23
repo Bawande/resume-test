@@ -2520,16 +2520,19 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   width: 0;
   height: 0;
   background: #fff;
-  opacity: 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
   .preloader__scene {
     position: absolute;
     display: inline-block;
+    bottom: -591px;
+    left: -591px;
     width: 591px;
     height: 591px;
-    opacity: 0; }
-    .preloader__scene img {
+    z-index: 999;
+    -webkit-transition: left 0.5s ease-in-out, top 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out, top 0.5s ease-in-out; }
+    .preloader__scene picture {
       display: block;
       width: 100%;
       height: 100%;
@@ -2544,12 +2547,16 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 @media (min-width: 768px) and (max-width: 1024px) {
   .preloader__scene {
     width: 391px;
-    height: 391px; } }
+    height: 391px;
+    left: -391px;
+    bottom: -391px; } }
 
 @media (max-width: 767px) {
   .preloader__scene {
     width: 200px;
-    height: 200px; } }
+    height: 200px;
+    left: -200px;
+    bottom: -200px; } }
 
 .scroll-position {
   position: fixed;

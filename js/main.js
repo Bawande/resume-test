@@ -277,98 +277,145 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _preloader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./preloader */ "./src/js/components/preloader/preloader.js");
+/* harmony import */ var _preloader_new__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./preloader-new */ "./src/js/components/preloader/preloader-new.js");
 
 
 /***/ }),
 
-/***/ "./src/js/components/preloader/preloader.js":
-/*!**************************************************!*\
-  !*** ./src/js/components/preloader/preloader.js ***!
-  \**************************************************/
+/***/ "./src/js/components/preloader/loadImages.js":
+/*!***************************************************!*\
+  !*** ./src/js/components/preloader/loadImages.js ***!
+  \***************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! animejs/lib/anime.es.js */ "./node_modules/animejs/lib/anime.es.js");
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../helpers */ "./src/js/helpers.js");
-
-
-_helpers__WEBPACK_IMPORTED_MODULE_1__["default"].lockScroll(true, $("#preloader"), "preloader");
-var loatedMedia = function loatedMedia() {
-  var $preloader = document.getElementById("preloader");
-  var mediaFiles = document.querySelectorAll("img, video");
-  console.log("loatedMedia");
-  [].forEach.call(mediaFiles, function (_, index, array) {
-    if (index == array.length - 1) {
-      $preloader.classList.remove("is-visible");
-    }
-  });
-  setTimeout(function () {
-    $preloader.style.display = "none";
-  }, 300);
-  _helpers__WEBPACK_IMPORTED_MODULE_1__["default"].lockScroll(false, $("#preloader"), "preloader");
-};
-var startPreloaderAnime = function startPreloaderAnime(screenWidth, screenHeight, parentWidth, parentHeight, timeLoated, callback) {
-  (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    targets: ".preloader__scene",
-    translateX: [{
-      value: parentWidth * -1,
-      duration: 50
-    }, {
-      value: screenWidth / 5,
-      duration: Math.round(timeLoated * 0.8)
-    }, {
-      value: screenWidth,
-      duration: Math.round(timeLoated * 0.2),
-      easing: "linear"
-    }],
-    translateY: [{
-      value: screenHeight,
-      duration: 50
-    }, {
-      value: screenHeight / 2,
-      duration: Math.round(timeLoated * 0.8)
-    }, {
-      value: parentHeight * -1,
-      duration: Math.round(timeLoated * 0.2),
-      easing: "linear"
-    }],
-    opacity: [0, 1],
-    complete: function complete() {
-      callback();
-    }
-  });
-};
-document.addEventListener("DOMContentLoaded", function () {
-  var $parent = document.querySelector("#preloader");
-  var $parentImage = document.querySelector(".preloader__scene");
-  var $image = $parentImage.querySelector("img");
-  var parentWidth = $parentImage.offsetWidth;
-  var parentHeight = $parentImage.offsetHeight;
-  var screenWidth = window.innerWidth;
-  var screenHeight = window.innerHeight;
-  var minTimeLoated = 3000;
-  if (!$parent.closest(".is-visible")) {
-    $parent.classList.add("is-visible");
-  }
-  if ($image) {
-    $image.onload = function () {
-      startPreloaderAnime(screenWidth, screenHeight, parentWidth, parentHeight, minTimeLoated, loatedMedia);
-    };
-  } else {
-    $parent.classList.remove("is-visible");
-    _helpers__WEBPACK_IMPORTED_MODULE_1__["default"].lockScroll(false, $("#preloader"), "preloader");
-  }
-  if (window.document.documentMode) {
-    // Do IE stuff
-    setTimeout(function () {
-      if ($parent.closest(".is-visible")) {
-        $parent.classList.remove("is-visible");
-        _helpers__WEBPACK_IMPORTED_MODULE_1__["default"].lockScroll(false, $("#preloader"), "preloader");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   readyImges: function() { return /* binding */ readyImges; }
+/* harmony export */ });
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+var urlImages = ["images/icon-company_21vek-by.jpg", "images/icon-company_Integral.jpg", "images/icon-company_j-creative-solutions.jpg", "images/icon-company_oz-by.jpg", "images/achievements-boy-desktop.png", "images/footer_hands-desktop.png", "images/header-logo-desktop.png", "images/header-menu_watch.png"];
+function LoadingImage() {
+  this.urls = new Set();
+  this.listImages = [];
+  this.addItem = function (url) {
+    this.urls.add(url);
+  };
+  this.getTotalItems = function () {
+    return this.urls.size;
+  };
+  this.load = function (callbackProgress) {
+    var _iterator = _createForOfIteratorHelper(this.urls),
+      _step;
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var url = _step.value;
+        var img = new Image();
+        this.listImages.push(img);
+        img.onload = callbackProgress;
+        img.src = url;
       }
-    }, 2500);
-  }
-});
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+  };
+}
+function readyImges(callbackprogress, callbackReady) {
+  var loader = new LoadingImage();
+  urlImages.forEach(function (url) {
+    loader.addItem(url);
+  });
+  var totalImages = loader.getTotalItems();
+  console.log("readyImges >>>>", totalImages);
+  var count = 0;
+  var progress = 0;
+  loader.load(function () {
+    count++;
+    progress = count / totalImages * 100;
+    if (typeof callbackprogress === "function") {
+      callbackprogress(progress);
+    }
+    if (totalImages === count) {
+      if (typeof callbackReady === "function") callbackReady();
+    }
+  });
+}
+
+
+/***/ }),
+
+/***/ "./src/js/components/preloader/preloader-new.js":
+/*!******************************************************!*\
+  !*** ./src/js/components/preloader/preloader-new.js ***!
+  \******************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../helpers */ "./src/js/helpers.js");
+/* harmony import */ var _loadImages__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loadImages */ "./src/js/components/preloader/loadImages.js");
+
+
+console.log("preloader");
+var $parentPreloader = document.querySelector("#preloader");
+var $preloaderScene = document.querySelector(".preloader__scene");
+_helpers__WEBPACK_IMPORTED_MODULE_0__["default"].lockScroll(true, $("#preloader"), "preloader");
+var removePreloader = function removePreloader() {
+  _helpers__WEBPACK_IMPORTED_MODULE_0__["default"].lockScroll(false, $("#preloader"), "preloader");
+  $parentPreloader.classList.remove("is-visible");
+  setTimeout(function () {
+    $parentPreloader.style.display = "none";
+  }, 300);
+};
+function preloaderImageLoad() {
+  return new Promise(function (resolve, reject) {
+    var img = new Image();
+    img.onload = resolve;
+    img.src = "images/preloader-rocket-man.jpg";
+  });
+}
+var onLoadWindow = function onLoadWindow() {
+  console.log("on load Window");
+  setTimeout(function () {
+    removePreloader();
+  }, 3000);
+};
+var contentLoaded = function contentLoaded() {
+  console.log("content Loaded");
+  var $mediaFiles = document.querySelectorAll("img, video");
+  preloaderImageLoad().then(function () {
+    console.log("preloader image Loaded");
+    var windowHeight = window.screen.height;
+    var windowWidth = window.screen.width;
+    var $image = document.querySelector(".preloader__image");
+    var imageRect = $image.getBoundingClientRect();
+    console.log(imageRect);
+    console.log($image.scrollHeight);
+    var startImagePositionX = imageRect.x;
+    var endImagePositionX = windowWidth - imageRect.width;
+    var distanceX = Math.abs(startImagePositionX) + Math.abs(endImagePositionX);
+    var startImagePositionY = imageRect.y;
+    var endImagePositionY = 0 - imageRect.height;
+    var distanceY = Math.abs(startImagePositionY) + Math.abs(endImagePositionY);
+    var positionImageX = startImagePositionX;
+    var positionImageY = startImagePositionY;
+    (0,_loadImages__WEBPACK_IMPORTED_MODULE_1__.readyImges)(function (progress) {
+      console.log(startImagePositionY + distanceY * progress / 100);
+      positionImageX = startImagePositionX + distanceX * progress / 100;
+      positionImageY = startImagePositionY - distanceY * progress / 100;
+      $preloaderScene.style.left = positionImageX + "px";
+      $preloaderScene.style.top = positionImageY + "px";
+    }, function () {
+      console.log("++++ readyImges ++++");
+      removePreloader();
+    });
+  });
+  console.log($mediaFiles.length);
+};
+window.addEventListener("load", onLoadWindow);
+document.addEventListener("DOMContentLoaded", contentLoaded);
 
 /***/ }),
 
