@@ -354,7 +354,10 @@ function readyImges(callbackprogress, callbackReady) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../helpers */ "./src/js/helpers.js");
-/* harmony import */ var _loadImages__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loadImages */ "./src/js/components/preloader/loadImages.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _loadImages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./loadImages */ "./src/js/components/preloader/loadImages.js");
+
 
 
 var $parentPreloader = document.querySelector("#preloader");
@@ -364,6 +367,7 @@ var removePreloader = function removePreloader() {
   _helpers__WEBPACK_IMPORTED_MODULE_0__["default"].lockScroll(false, $("#preloader"), "preloader");
   $parentPreloader.classList.remove("is-visible");
   setTimeout(function () {
+    aos__WEBPACK_IMPORTED_MODULE_1___default().init();
     $parentPreloader.style.display = "none";
   }, 300);
 };
@@ -394,7 +398,7 @@ var contentLoaded = function contentLoaded() {
     var distanceY = Math.abs(startImagePositionY) + Math.abs(endImagePositionY);
     var positionImageX = startImagePositionX;
     var positionImageY = startImagePositionY;
-    (0,_loadImages__WEBPACK_IMPORTED_MODULE_1__.readyImges)(function (progress) {
+    (0,_loadImages__WEBPACK_IMPORTED_MODULE_2__.readyImges)(function (progress) {
       positionImageX = startImagePositionX + distanceX * progress / 100;
       positionImageY = startImagePositionY - distanceY * progress / 100;
       $preloaderScene.style.left = positionImageX + "px";
@@ -731,13 +735,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_ie_fix__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./vendor/ie-fix */ "./src/js/vendor/ie-fix.js");
 /* harmony import */ var _vendor_vh_fix__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./vendor/vh-fix */ "./src/js/vendor/vh-fix.js");
 /* harmony import */ var _modules_actualYear__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/actualYear */ "./src/js/modules/actualYear.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/header */ "./src/js/components/header.js");
-/* harmony import */ var _modules_lazyLoading__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/lazyLoading */ "./src/js/modules/lazyLoading.js");
-/* harmony import */ var _modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/scrollToAnchor */ "./src/js/modules/scrollToAnchor.js");
-/* harmony import */ var _modules_backToTop__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/backToTop */ "./src/js/modules/backToTop.js");
-
+/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/header */ "./src/js/components/header.js");
+/* harmony import */ var _modules_lazyLoading__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/lazyLoading */ "./src/js/modules/lazyLoading.js");
+/* harmony import */ var _modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/scrollToAnchor */ "./src/js/modules/scrollToAnchor.js");
+/* harmony import */ var _modules_backToTop__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/backToTop */ "./src/js/modules/backToTop.js");
 
 
 
@@ -755,13 +756,10 @@ __webpack_require__.r(__webpack_exports__);
 (0,_vendor_ie_fix__WEBPACK_IMPORTED_MODULE_7__.ieFix)();
 (0,_vendor_vh_fix__WEBPACK_IMPORTED_MODULE_8__.vhFix)();
 (0,_modules_actualYear__WEBPACK_IMPORTED_MODULE_9__.actualYear)();
-_modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_13__["default"].init();
-_modules_backToTop__WEBPACK_IMPORTED_MODULE_14__["default"].init();
-_components_header__WEBPACK_IMPORTED_MODULE_11__["default"].init();
-_modules_lazyLoading__WEBPACK_IMPORTED_MODULE_12__["default"].init();
-aos__WEBPACK_IMPORTED_MODULE_10___default().init({
-  delay: 5100
-});
+_modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_12__["default"].init();
+_modules_backToTop__WEBPACK_IMPORTED_MODULE_13__["default"].init();
+_components_header__WEBPACK_IMPORTED_MODULE_10__["default"].init();
+_modules_lazyLoading__WEBPACK_IMPORTED_MODULE_11__["default"].init();
 
 /***/ }),
 
