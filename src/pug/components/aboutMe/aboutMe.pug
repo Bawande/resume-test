@@ -8,11 +8,20 @@
 section.about-me#about-me
 	.about-me__container.container
 		.about-me__content.about-me-content
-			h1.about-me-content__title
+			h1.about-me-content__title(
+				data-aos="fade-up"
+     			data-aos-duration="1000"
+			)
 				span #{name},
 				span #{position}
-			p.about-me-content__text #{text}
-		.about-me__contacts.about-me-contacts
+			p.about-me-content__text(
+				data-aos="fade-up"
+     			data-aos-duration="1000"
+			)!=text
+		.about-me__contacts.about-me-contacts(
+			data-aos="fade-up"
+			data-aos-duration="1000"
+		)
 			address.about-me-contacts__list
 				a(href="vadims@list.ru").about-me-contacts__link
 					| vadims@list.ru

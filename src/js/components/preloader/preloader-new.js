@@ -1,5 +1,6 @@
 import helpers from "../../helpers";
 
+import AOS from "aos";
 import { readyImges } from "./loadImages";
 
 const $parentPreloader = document.querySelector("#preloader");
@@ -13,6 +14,8 @@ const removePreloader = () => {
 	$parentPreloader.classList.remove("is-visible");
 
 	setTimeout(() => {
+		AOS.init();
+
 		$parentPreloader.style.display = "none";
 	}, 300);
 };

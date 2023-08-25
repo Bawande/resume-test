@@ -10,7 +10,6 @@ import { ieFix } from "./vendor/ie-fix";
 import { vhFix } from "./vendor/vh-fix";
 import { actualYear } from "./modules/actualYear";
 
-import AOS from "aos";
 import header from "./components/header";
 import lazyLoading from "./modules/lazyLoading";
 import scrollToAnchor from "./modules/scrollToAnchor";
@@ -25,7 +24,3 @@ backToTop.init();
 header.init();
 
 lazyLoading.init();
-
-AOS.init({
-	delay: 5100,
-});
