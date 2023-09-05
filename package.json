@@ -7,7 +7,9 @@
 	"scripts": {
 		"prepare": "husky install",
 		"pre-commit": "lint-staged",
-		"deploy": "gh-pages -d build"
+		"deploy": "gh-pages -d build",
+		"start": "gulp default",
+		"build": "gulp build"
 	},
 	"author": "Ninelines Agency <info@ninelines.agency>",
 	"license": "ISC",

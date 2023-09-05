@@ -15,7 +15,7 @@ const fixedMenu = () => {
 		state.height = parentHeight;
 	}
 
-	if (parentRect.height <= scroll) {
+	if (parentRect.height <= scroll - 100) {
 		if (state.height && state.height < parentHeight) {
 			state.height = parentHeight;
 		}
@@ -24,9 +24,16 @@ const fixedMenu = () => {
 		$parent.classList.add("is-fixed");
 		$parent.style.width = parentRect.width + "px";
 	} else {
-		$parent.classList.remove("is-fixed");
-		$parent.style.width = "";
-		$body.style.paddingTop = "";
+		if ($parent.closest(".is-fixed")) {
+			$parent.classList.add("is-top");
+
+			setTimeout(() => {
+				$parent.classList.remove("is-fixed");
+				$parent.classList.remove("is-top");
+				$parent.style.width = "";
+				$body.style.paddingTop = "";
+			}, 200);
+		}
 	}
 };
 

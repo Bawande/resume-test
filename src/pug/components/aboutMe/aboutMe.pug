@@ -4,35 +4,31 @@
 	const text = "Мне нравится оживлять статические дизайны и превращать их в интерактивные приложения. Чем безумнее идея тем интереснее её реализация. Так-же я люблю заниматься разработкой и дизайном сложных проектов. Имею большой опыт дистанционной коммуникации. Очень мотивирован развиваться в направлении разработки Web-приложения. Почти всё свободное время уделяю обучению и практике";
 	const shareList = ['facebook', 'vk', 'telegram'];
 
-
 section.about-me#about-me
 	.about-me__container.container
 		.about-me__content.about-me-content
 			h1.about-me-content__title(
-				data-aos="fade-up"
-     			data-aos-duration="1000"
+				data-aos="fade-up" data-aos-duration="1000"
 			)
 				span #{name},
 				span #{position}
 			p.about-me-content__text(
-				data-aos="fade-up"
-     			data-aos-duration="1000"
-			)!=text
+				data-aos="fade-up" data-aos-duration="1000"
+			)!= text
 		.about-me__contacts.about-me-contacts(
 			data-aos="fade-up"
 			data-aos-duration="1000"
 		)
 			address.about-me-contacts__list
-				a(href="vadims@list.ru").about-me-contacts__link
+				a.about-me-contacts__link(href="mailto:vadims@list.ru")
 					| vadims@list.ru
-				a(href="tel:+79835311521").about-me-contacts__link
+				a.about-me-contacts__link(href="tel:+79835311521")
 					| +7(983) 531-15-21
-				a(href="https://yandex.ru/maps/-/CDQMnMkk" target="_blank").about-me-contacts__link
+				a.about-me-contacts__link(href="https://yandex.ru/maps/-/CDQMnMkk" target="_blank")
 					| г. Улан-Удэ
 			.about-me-contacts__share-list
 				each value in shareList
-					button(data-social=`${value}`).about-me-contacts__share-button.btn
+					button.about-me-contacts__share-button.btn(data-social= value)
 						+svg(`${value}`)
 		.about-me__background-item
 			+backgroundPattern
-

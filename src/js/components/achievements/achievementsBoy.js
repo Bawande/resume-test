@@ -11,7 +11,7 @@ const fixedScrollBlock = () => {
 	$fixedItem.style.width = parentRect.width * 0.27 + "px";
 
 	if (detectWidth(768)) {
-		$fixedItem.classList.remove("_bottom");
+		$fixedItem.classList.remove("is-bottom");
 		$fixedItem.classList.remove("is-fixed");
 		$fixedItem.style.width = "";
 		window.removeEventListener("scroll", fixedScrollBlock);
@@ -23,15 +23,19 @@ const fixedScrollBlock = () => {
 		parentRect.top <= 0 &&
 		parentRect.bottom >= fixedItemRect.height
 	) {
-		$fixedItem.classList.remove("_bottom");
+		$fixedItem.classList.remove("is-bottom");
 		$fixedItem.classList.add("is-fixed");
 	} else {
 		if (parentRect.bottom - 100 <= fixedItemRect.bottom) {
-			$fixedItem.classList.add("_bottom");
+			$fixedItem.classList.add("is-bottom");
 			$fixedItem.classList.remove("is-fixed");
+
+			setTimeout(() => {
+				$fixedItem.classList.remove("is-bottom");
+			}, 700);
 			// $fixedItem.style.width = "";
 		} else {
-			$fixedItem.classList.remove("_bottom");
+			$fixedItem.classList.remove("is-bottom");
 			$fixedItem.classList.remove("is-fixed");
 			// $fixedItem.style.width = "";
 		}

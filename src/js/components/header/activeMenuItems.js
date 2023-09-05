@@ -13,7 +13,7 @@ const linksActiveClassRemove = () => {
 
 const searchActiveMenuItems = () => {
 	const $sections = document.querySelectorAll("section");
-	const offsetScroll = 80;
+	const offsetScroll = 400;
 
 	if (detectWidth(768)) {
 		window.removeEventListener("scroll", optimizedSearchActiveMenuItems);
@@ -26,8 +26,8 @@ const searchActiveMenuItems = () => {
 		const sectionRect = $section.getBoundingClientRect();
 
 		if (
-			sectionRect.top - offsetScroll <= 0 &&
-			sectionRect.bottom - offsetScroll >= 0
+			sectionRect.top <= offsetScroll &&
+			sectionRect.bottom >= offsetScroll
 		) {
 			const sectionID = $section.getAttribute("id");
 
