@@ -9,7 +9,5 @@ mixin educationCard(cardData = {})
 				- const {primary, color} = icon;
 				- const iconClass = primary ? `_primary _${color}` : `_secondary _${color}`;
 				span.education-card__icon(class=`${iconClass}`)
-		h3.education-card__title= title
+		h3.education-card__title!= title
 		p.education-card__description!= description
-
-

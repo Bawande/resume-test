@@ -76,6 +76,18 @@
 
 			@include icon-experience(nth($colors, 2), nth($colors, 3));
 		}
+
+		&._black {
+			$colors: $icon-black;
+
+			@include icon-experience(nth($colors, 2), nth($colors, 3));
+		}
+
+		&._darkgreen {
+			$colors: $icon-darkgreen;
+
+			@include icon-experience(nth($colors, 2), nth($colors, 3));
+		}
 	}
 
 	&__company-wrap {
@@ -87,6 +99,7 @@
 	&__company-logo {
 		display: block;
 		flex-shrink: 0;
+		overflow: hidden;
 		margin-right: 8px;
 		border-radius: 50%;
 		width: 30px;

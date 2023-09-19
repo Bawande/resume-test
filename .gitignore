@@ -57,3 +57,4 @@ Thumbs.db
 .vscode/
 aero-deploy.tar.gz
 package-lock.json
+test-project-mixvel.code-workspace

@@ -37,4 +37,4 @@ mixin experienceCard(cardData = {})
 		- if (worksLinks.length)
 			.experience-card__works-list
 					each work in worksLinks
-						a.experience-card__work-link(href=`${work.url ? work.url : '#'}`)= work.label
+						a.experience-card__work-link(href=`${work.url ? work.url : '#'}` target="_blank")= work.label

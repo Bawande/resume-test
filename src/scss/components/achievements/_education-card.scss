@@ -54,6 +54,18 @@
 
 			@include icon-education(nth($colors, 1), nth($colors, 2), nth($colors, 3));
 		}
+
+		&._black {
+			$colors: $icon-black;
+
+			@include icon-education(nth($colors, 1), nth($colors, 2), nth($colors, 3));
+		}
+
+		&._darkgreen {
+			$colors: $icon-darkgreen;
+
+			@include icon-education(nth($colors, 1), nth($colors, 2), nth($colors, 3));
+		}
 	}
 
 	&__icon._primary {

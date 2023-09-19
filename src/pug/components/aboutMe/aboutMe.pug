@@ -1,34 +1,40 @@
 -
 	const name = "Кодаков Вадим";
-	const position = "Верстальщик/Frontend-разработчик";
-	const text = "Мне нравится оживлять статические дизайны и превращать их в интерактивные приложения. Чем безумнее идея тем интереснее её реализация. Так-же я люблю заниматься разработкой и дизайном сложных проектов. Имею большой опыт дистанционной коммуникации. Очень мотивирован развиваться в направлении разработки Web-приложения. Почти всё свободное время уделяю обучению и практике";
+	const position = "Фронтенд-разработчик и графический дизайнер";
+	const text = "<p> С 2020 года я специализируюсь на фронтенд-разработке веб-приложений. Мой профессиональный стек включает в себя HTML, CSS, JavaScript, а также фреймворки и библиотеки, такие как React.js, Vue и Angular. Я уверенно работаю с современными инструментами и технологиями разработки, такими как NPM, Git, Gulp, PUG, SCSS. Также более 15 лет профессионально занимаюсь графическим дизайном.  Имею опыт проектирование, прототипирование, автоматизации и дизайна проектов разной сложности. На высоком  уровне владею графическими редакторами Adobe (Photoshop, XD,  Illustrator, InDesign, Acrobat-Pro), Figma.</p> <p>Обладаю большим опытом удаленной работы, что позволяет мне эффективно справляться с поставленными задачами и быть гибким в организации своего времени. </p> <p> Моя основная цель при разработке веб-приложения — создавать интуитивно понятные и привлекательные веб-интерфейсы для пользователей. Я активно изучаю новейшие тенденции и подходы в дизайне и разработке пользовательского интерфейса, чтобы создавать современные и инновационные продукты. </p> <p> Я стремлюсь к продолжительным отношениям с работодателем и готов решать сложные задачи и преодолевать технические вызовы. Я уверен, что мои навыки и опыт позволят мне эффективно вносить вклад в вашу компанию и обеспечить успех проектов в области frontend разработки.</p>";
 	const shareList = ['facebook', 'vk', 'telegram'];
 
 section.about-me#about-me
 	.about-me__container.container
 		.about-me__content.about-me-content
 			h1.about-me-content__title(
-				data-aos="fade-up" data-aos-duration="1000"
+				data-aos="fade-right" data-aos-duration="1000"
 			)
 				span #{name},
 				span #{position}
-			p.about-me-content__text(
-				data-aos="fade-up" data-aos-duration="1000"
+			.about-me-content__text(
+				data-aos="fade-right" data-aos-duration="1500"
 			)!= text
 		.about-me__contacts.about-me-contacts(
-			data-aos="fade-up"
+			data-aos="fade-left"
 			data-aos-duration="1000"
 		)
 			address.about-me-contacts__list
+				//- a.about-me-contacts__link(href="https://www.behance.net/vadimkarandashev" target="_blank")
+				//- 	| www.behance.net
 				a.about-me-contacts__link(href="mailto:vadims@list.ru")
 					| vadims@list.ru
-				a.about-me-contacts__link(href="tel:+79835311521")
-					| +7(983) 531-15-21
+				a.about-me-contacts__link(href="https://t.me/KondakovVadim" target="_blank")
+					| @telegramm
+				//- a.about-me-contacts__link(href="tel:+79835311521")
+				//- 	| +7(983) 531-15-21
+				a.about-me-contacts__link(href="https://github.com/Bawande" target="_blank")
+					| www.github.com
 				a.about-me-contacts__link(href="https://yandex.ru/maps/-/CDQMnMkk" target="_blank")
 					| г. Улан-Удэ
-			.about-me-contacts__share-list
-				each value in shareList
-					button.about-me-contacts__share-button.btn(data-social= value)
-						+svg(`${value}`)
+			//- .about-me-contacts__share-list
+			//- 	each value in shareList
+			//- 		button.about-me-contacts__share-button.btn(data-social= value)
+			//- 			+svg(`${value}`)
 		.about-me__background-item
 			+backgroundPattern
