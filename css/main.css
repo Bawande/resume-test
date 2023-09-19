@@ -1767,6 +1767,10 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
             transform: translate(-50%); }
   .header__menu-wrap.is-fixed .header-topnav__link {
     color: #fff; }
+    .header__menu-wrap.is-fixed .header-topnav__link::after {
+      background-color: #fff; }
+    .header__menu-wrap.is-fixed .header-topnav__link.is-active::after {
+      background-color: #2F80ED; }
   .header__menu-wrap.is-fixed .header-topnav__link.is-active {
     color: #2F80ED; }
   .header__menu-wrap.is-fixed .header__face-logo {
@@ -1817,6 +1821,10 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   to {
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
+
+.header__menu-wrap.is-fixed.is-top {
+  -webkit-animation: animate-slide-out 0.2s cubic-bezier(0, 0, 0.2, 1);
+          animation: animate-slide-out 0.2s cubic-bezier(0, 0, 0.2, 1); }
 
 @media (max-width: 1024px) {
   .header__container {
@@ -1981,8 +1989,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .header-topnav__link.is-active {
   color: #2F80ED; }
   .header-topnav__link.is-active::after {
-    background-color: #2F80ED;
-    width: 90%; }
+    width: 90%;
+    background-color: #2F80ED; }
 
 @media (hover: hover) and (pointer: fine), screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .header-topnav__link:hover::after {
@@ -2128,6 +2136,11 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   font-size: 14px;
   line-height: 140%; }
 
+.about-me-content__text p {
+  margin-bottom: 6px; }
+  .about-me-content__text p:last-child {
+    margin-bottom: 0; }
+
 @media (max-width: 767px) {
   .about-me-content__title {
     margin: 0 0 20px; } }
@@ -2219,6 +2232,12 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     .education-card__icon._orange {
       border-color: #ffd5b4;
       background: linear-gradient(135deg, #ffbc89 50%, #ffa25a 50%); }
+    .education-card__icon._black {
+      border-color: #767676;
+      background: linear-gradient(135deg, #626262 50%, #282828 50%); }
+    .education-card__icon._darkgreen {
+      border-color: #acc38f;
+      background: linear-gradient(135deg, #9ab973 50%, #6f993b 50%); }
   .education-card__icon._primary {
     z-index: 59; }
   .education-card__icon._secondary {
@@ -2285,6 +2304,10 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
     background: linear-gradient(135deg, #fe74a6 50%, #ee5087 50%); }
   .experience-card__position-icon._orange {
     background: linear-gradient(135deg, #ffbc89 50%, #ffa25a 50%); }
+  .experience-card__position-icon._black {
+    background: linear-gradient(135deg, #626262 50%, #282828 50%); }
+  .experience-card__position-icon._darkgreen {
+    background: linear-gradient(135deg, #9ab973 50%, #6f993b 50%); }
 
 .experience-card__company-wrap {
   display: -webkit-box;
@@ -2299,6 +2322,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  overflow: hidden;
   margin-right: 8px;
   border-radius: 50%;
   width: 30px;
@@ -2385,11 +2409,28 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
        object-fit: cover; }
   .achievements__scene.is-fixed {
     position: fixed;
-    top: 66px; }
-  .achievements__scene._bottom {
-    position: absolute;
-    top: auto;
-    bottom: 0; }
+    top: 66px;
+    bottom: auto; }
+  .achievements__scene.is-bottom {
+    position: fixed;
+    -webkit-animation: animate-slide-out 0.7s cubic-bezier(0, 0, 0.2, 1);
+            animation: animate-slide-out 0.7s cubic-bezier(0, 0, 0.2, 1); }
+
+@-webkit-keyframes animate-slide-out {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  to {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); } }
+
+@keyframes animate-slide-out {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  to {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); } }
 
 .achievements__education {
   z-index: 67;

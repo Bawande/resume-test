@@ -20,22 +20,25 @@ var fixedScrollBlock = function fixedScrollBlock() {
   var fixedItemRect = $fixedItem.getBoundingClientRect();
   $fixedItem.style.width = parentRect.width * 0.27 + "px";
   if ((0,_helpers_deviceCheck__WEBPACK_IMPORTED_MODULE_0__.detectWidth)(768)) {
-    $fixedItem.classList.remove("_bottom");
+    $fixedItem.classList.remove("is-bottom");
     $fixedItem.classList.remove("is-fixed");
     $fixedItem.style.width = "";
     window.removeEventListener("scroll", fixedScrollBlock);
     return;
   }
   if (fixedItemRect.height != 0 && parentRect.top <= 0 && parentRect.bottom >= fixedItemRect.height) {
-    $fixedItem.classList.remove("_bottom");
+    $fixedItem.classList.remove("is-bottom");
     $fixedItem.classList.add("is-fixed");
   } else {
     if (parentRect.bottom - 100 <= fixedItemRect.bottom) {
-      $fixedItem.classList.add("_bottom");
+      $fixedItem.classList.add("is-bottom");
       $fixedItem.classList.remove("is-fixed");
+      setTimeout(function () {
+        $fixedItem.classList.remove("is-bottom");
+      }, 700);
       // $fixedItem.style.width = "";
     } else {
-      $fixedItem.classList.remove("_bottom");
+      $fixedItem.classList.remove("is-bottom");
       $fixedItem.classList.remove("is-fixed");
       // $fixedItem.style.width = "";
     }
@@ -164,7 +167,7 @@ var linksActiveClassRemove = function linksActiveClassRemove() {
 };
 var searchActiveMenuItems = function searchActiveMenuItems() {
   var $sections = document.querySelectorAll("section");
-  var offsetScroll = 80;
+  var offsetScroll = 400;
   if ((0,_helpers_deviceCheck__WEBPACK_IMPORTED_MODULE_0__.detectWidth)(768)) {
     window.removeEventListener("scroll", optimizedSearchActiveMenuItems);
     return;
@@ -172,7 +175,7 @@ var searchActiveMenuItems = function searchActiveMenuItems() {
   linksActiveClassRemove();
   [].forEach.call($sections, function ($section) {
     var sectionRect = $section.getBoundingClientRect();
-    if (sectionRect.top - offsetScroll <= 0 && sectionRect.bottom - offsetScroll >= 0) {
+    if (sectionRect.top <= offsetScroll && sectionRect.bottom >= offsetScroll) {
       var sectionID = $section.getAttribute("id");
       [].forEach.call($links, function ($link) {
         var linkHref = $link.getAttribute("href").slice(1);
@@ -229,7 +232,7 @@ var fixedMenu = function fixedMenu() {
   if (state.height === null) {
     state.height = parentHeight;
   }
-  if (parentRect.height <= scroll) {
+  if (parentRect.height <= scroll - 100) {
     if (state.height && state.height < parentHeight) {
       state.height = parentHeight;
     }
@@ -237,9 +240,15 @@ var fixedMenu = function fixedMenu() {
     $parent.classList.add("is-fixed");
     $parent.style.width = parentRect.width + "px";
   } else {
-    $parent.classList.remove("is-fixed");
-    $parent.style.width = "";
-    $body.style.paddingTop = "";
+    if ($parent.closest(".is-fixed")) {
+      $parent.classList.add("is-top");
+      setTimeout(function () {
+        $parent.classList.remove("is-fixed");
+        $parent.classList.remove("is-top");
+        $parent.style.width = "";
+        $body.style.paddingTop = "";
+      }, 200);
+    }
   }
 };
 var optimizedFixedMenu = (0,_modules_throttle__WEBPACK_IMPORTED_MODULE_1__["default"])(fixedMenu, 100);
